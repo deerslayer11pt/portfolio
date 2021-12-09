@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
     return (
         <header className="p-4 bg-site-dark">
             <div className="container flex justify-between h-16 mx-auto">
@@ -19,7 +19,7 @@ const Navbar = () => {
                         <Link to="/goals" className="flex items-center px-4 -mb-1 border-b-2 border-site-light text-site-light text-lg font-bold hover:text-site-blue hover:border-site-blue transition duration-200">Goals</Link>
                     </li>
                 </ul>
-                <button className="flex justify-end p-4 md:hidden text-site-light">
+                <button className="flex justify-end p-4 md:hidden text-site-light" onClick={toggle}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
